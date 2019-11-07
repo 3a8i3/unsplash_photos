@@ -1,0 +1,29 @@
+
+/* label focus color */
+#txtBuscar:focus + label {
+ color: #fff;
+}
+/* label underline focus color */
+#txtBuscar:focus {
+ border-bottom: 1px solid #fff;
+ box-shadow: 0 1px 0 0 #fff;
+}
+/* valid color */
+#txtBuscar .valid {
+ border-bottom: 1px solid #fff;
+ box-shadow: 0 1px 0 0 #fff;
+}
+/* invalid color */
+#txtBuscar.invalid {
+ border-bottom: 1px solid #fff;
+ box-shadow: 0 1px 0 0 #fff;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+ color: #fff;
+}
+
+/* label color */
+#txtBuscar label {
+ color: #fff;
+}

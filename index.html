@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fotos</title>
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header id="top">
+        <nav class="purple lighten-1">
+            
+            <div class="nav-wrapper">
+                
+               <div class="row">
+                    <div class="col s5">
+                        <span class="brand-logo" style="padding-left: 20px">App Fotos de Unsplash</span>
+                    </div>
+                   <div class="input-field col s5">
+                       <i class="material-icons prefix">search</i>
+                       <input id="txtBuscar" type="text" class="validate" style="color: #fff">
+                       <label for="txtBuscar">Buscar imagenes</label>
+                   </div>
+               </div>
+                
+                <ul class="right" style="margin-right: 20px">
+
+                    <li>
+                    </li>
+
+                </ul>
+                
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="container">
+        <h4><i>Total de registros:</i><span id="total_registros"></span></h4>
+
+        <section id="paginador">
+            <div class="card">
+               <div class="card-content center">
+                    <a href="#top" class="btn purple lighten-1 btn-small" id="desc">
+                        <i class="material-icons">chevron_left</i>
+                    </a> 
+                    Página <span id="pagina">1</span> de <span id="total_paginas">100</span> 
+                    <a href="#top" class="btn purple lighten-1 btn-small" id="asc">
+                        <i class="material-icons">chevron_right</i>
+                    </a>
+               </div>
+            </div>
+        </section>
+    
+        <section id="contenido" class="row">
+            
+            <div class="col s6 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/200/300" style="max-width:290px; max-height:150px">
+                        <span class="card-title flow-text">Descripción</span>
+                    </div>
+                    <div class="card-content">
+                        <a href="url_del_perfil" target="_bank">
+                            <div class="chip">
+                                <img src="https://picsum.photos/200/300">
+                                <span>Nombre del autor</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-action">
+                        <a onclick="mostrarModal('https://picsum.photos/200/300')" class="waves-effect waves-light btn modal-trigger" href="#modal1">Ver foto</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="contenedor-modal">
+            
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content center">
+                    <img id="img-modal" src="https://picsum.photos/200/300" style="max-width: 95%; width: 70%">
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="page-footer purple lighten-1">
+        
+        <div class="center">
+            &copy;Facultad de Ciencias y Tecnología - UNICAN
+        </div>
+        
+    </footer>
+
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/axios.min.js"></script>
+    <script src="js/controller.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.modal').modal();
+        });
+    </script>
+</body>
+</html>
